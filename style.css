@@ -1,0 +1,322 @@
+*, ::after, ::before {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 62.5%; /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #222222;
+    --gray: #828282;
+    --lightgray: #e3e3e3;
+    --gray100: #f1f1f1;
+    --white: #fff;
+    --green: #199e62;
+    --lightgreen: #b4ffdd;
+    --red: #fd2626;
+    --lightred: #ffdada;
+    --blue: #1159ce;
+    --lightblue: #c6dcff;
+}
+
+body {
+    background-color: var(--lightgray);
+    padding: 2rem 20rem;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+a {
+    color: var(--black);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* color */
+.black {
+    color: var(--black);
+}
+.gray {
+    color: var(--gray);
+}
+.lightgray {
+    color: var(--lightgray);
+}
+.white {
+    color: var(--white);
+}
+.green {
+    color: var(--green);
+}
+.lightgreen {
+    color: var(--lightgreen);
+}
+.red {
+    color: var(--red);
+}
+.lightred {
+    color: var(--lightred);
+}
+.blue {
+    color: var(--blue);
+}
+.lightblue {
+    color: var(--lightblue);
+}
+
+/* typo */
+.bold {
+    font-weight: 600 !important;
+}
+
+.font-22 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+.font-20 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+.font-18 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: normal;
+}
+.font-16 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: normal;
+}
+.font-14 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: normal;
+}
+.font-12 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* layout */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+.col {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* gap */
+.gap-xsmall {
+    gap:8px;
+}
+.gap-small {
+    gap: 12px;
+}
+.gap-medium {
+    gap: 16px;
+}
+.gap-large {
+    gap: 20px;
+}
+.gap-xlarge {
+    gap: 24px;
+}
+
+/* line */
+.line {
+    border: 0.2px solid var(--lightgray) !important;
+    border: none;
+}
+
+/* align */
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.fill {
+    flex: 1;
+}
+
+/* btn */
+.center-btn {
+    border: none;
+    background-color: var(--lightgray);
+    color: var(--black);
+    padding: 12px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 8px;
+    flex: 1;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#green-btn {
+    background-color: var(--lightgreen);
+    color: var(--green);
+    font-weight: 600;
+}
+
+#my-btn {
+    height: fit-content !important;
+    flex: 0 !important;
+    background-color: var(--white);
+    color: var(--green);
+    font-size: 1.2rem !important;
+    padding: 8px !important;
+}
+
+/* chip */
+.chip-new:after {
+    content: "NEW";
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: var(--red);
+    background-color: var(--lightred);
+    text-align: center !important;
+    padding: 0 4px;
+}
+
+.chip-event:after {
+    content: "EVENT";
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: var(--blue);
+    background-color: var(--lightblue);
+    text-align: center !important;
+    padding: 0 4px;
+}
+
+.line-chip {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+/* card */
+.history {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px
+}
+
+.history-card {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--white);
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.history-card-wrapper {
+    width: 80rem;
+    height: fit-content;
+}
+
+.my-card {
+    border: none;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 12px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 12px;
+    /* min-width: 240px; */
+    flex: 1;
+    justify-content: space-between;
+}
+
+.my-card-wrapper {
+    width: 100%;
+    /* height: fit-content; */
+    height: 160px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px; 
+}
+
+.line-card {
+    background-color: var(--black);
+    padding: 16px;
+    border-radius: 8px;
+    color: var(--white);
+}
+
+#line-card-light {
+    background-color: var(--gray100) !important;
+    color: var(--black) !important;
+}
+
+.line-card-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+}
+
+.list-card {
+    /* background-color: var(--white);
+    border-radius: 8px; */
+    padding: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+.list-wrapper {
+    max-width: 400px;
+}
+
+.all-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+}
+
+/* img */
+img {
+    cursor: pointer;
+}
+
+.history-img {
+    width: 100px;
+    height: 100px;
+    background-color: var(--green);
+    border-radius: 16px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    background-color: var(--green);
+    border-radius: 300px;
+}
